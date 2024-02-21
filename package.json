@@ -1,0 +1,16 @@
+{
+  "name": "2024s-lab-01-firestone82",
+  "version": "1.0.0",
+  "description": "You can run any file in your console using command `node task-array.js`",
+  "main": "task-cycles.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.7",
+    "prettier": "^3.2.5"
+  },
+  "type": "module"
+}
