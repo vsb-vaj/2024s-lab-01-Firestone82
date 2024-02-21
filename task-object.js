@@ -1,6 +1,10 @@
 // Checkout useful functions at: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
 // Checkout useful functions at: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 
+function printFunctionName(name) {
+    console.log(`\n:${name}`);
+}
+
 // 1 ----
 // Create a function that takes an object argument sizes (contains width, length, height keys) and returns the volume of the box.
 // Examples
@@ -10,9 +14,13 @@
 
 // Your code:
 export const volumeOfBox = (obj) => {
-
+    return obj.width * obj.length * obj.height;
 };
-  
+printFunctionName("volumeOfBox");
+console.log(volumeOfBox({ width: 2, length: 5, height: 1 }));
+console.log(volumeOfBox({ width: 4, length: 2, height: 2 }));
+console.log(volumeOfBox({ width: 2, length: 3, height: 5 }));
+
 // 2 ----
 // Create a function that takes strings - firstname, lastname, age, and return object with firstname, lastname, age, yearOfBirth
 // Examples
@@ -20,9 +28,11 @@ export const volumeOfBox = (obj) => {
 
 // Your code:
 export const personObject = (firstname, lastname, age) => {
-
-
+    const yearOfBirth = new Date().getFullYear() - age;
+    return { firstname, lastname, age, yearOfBirth };
 };
+printFunctionName("personObject");
+console.log(personObject("Obi-wan", "Kenobi", "40"));
 
 // 3 ----
 // Create the function that takes an array with objects and returns the sum of people's budgets.
@@ -35,8 +45,14 @@ export const personObject = (firstname, lastname, age) => {
 
 //Your code:
 export const getBudgets = (persons) => {
-
+    return persons.reduce((acc, person) => acc + person.budget, 0);
 };
+printFunctionName("getBudgets");
+console.log(getBudgets([
+    { name: "John", age: 21, budget: 23000 },
+    { name: "Steve", age: 32, budget: 40000 },
+    { name: "Martin", age: 16, budget: 2700 }
+]));
 
 // 4 ----
 // Create function that takes array of cars and sort them by price
@@ -46,6 +62,11 @@ export const getBudgets = (persons) => {
 
 // Your code:
 export const sortVehiclesByPrice = (vehicles) => {
-  
-
+    return vehicles.sort((a, b) => a.price - b.price);
 };
+printFunctionName("sortVehiclesByPrice");
+console.log(sortVehiclesByPrice([
+    { name: "Executor Star Dreadnought", price: 999 },
+    { name: "T-47 Airspeeder", price: 5 },
+    { name: "AT-AT", price: 20 }
+]));
