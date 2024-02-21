@@ -2,7 +2,7 @@
 // Checkout useful functions at: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 
 function printFunctionName(name) {
-    console.log(`\n:${name}`);
+  console.log(`\n:${name}`);
 }
 
 // 1 ----
@@ -14,7 +14,7 @@ function printFunctionName(name) {
 
 // Your code:
 export const volumeOfBox = (obj) => {
-    return obj.width * obj.length * obj.height;
+  return obj.width * obj.length * obj.height;
 };
 printFunctionName("volumeOfBox");
 console.log(volumeOfBox({ width: 2, length: 5, height: 1 }));
@@ -28,8 +28,8 @@ console.log(volumeOfBox({ width: 2, length: 3, height: 5 }));
 
 // Your code:
 export const personObject = (firstname, lastname, age) => {
-    const yearOfBirth = new Date().getFullYear() - age;
-    return { firstname, lastname, age, yearOfBirth };
+  const yearOfBirth = new Date().getFullYear() - age;
+  return { firstname, lastname, age, yearOfBirth };
 };
 printFunctionName("personObject");
 console.log(personObject("Obi-wan", "Kenobi", "40"));
@@ -45,14 +45,16 @@ console.log(personObject("Obi-wan", "Kenobi", "40"));
 
 //Your code:
 export const getBudgets = (persons) => {
-    return persons.reduce((acc, person) => acc + person.budget, 0);
+  return persons.reduce((acc, person) => acc + person.budget, 0);
 };
 printFunctionName("getBudgets");
-console.log(getBudgets([
+console.log(
+  getBudgets([
     { name: "John", age: 21, budget: 23000 },
     { name: "Steve", age: 32, budget: 40000 },
-    { name: "Martin", age: 16, budget: 2700 }
-]));
+    { name: "Martin", age: 16, budget: 2700 },
+  ]),
+);
 
 // 4 ----
 // Create function that takes array of cars and sort them by price
@@ -62,11 +64,13 @@ console.log(getBudgets([
 
 // Your code:
 export const sortVehiclesByPrice = (vehicles) => {
-    return vehicles.sort((a, b) => a.price - b.price);
+  return vehicles.sort((a, b) => a.price - b.price);
 };
 printFunctionName("sortVehiclesByPrice");
-console.log(sortVehiclesByPrice([
+console.log(
+  sortVehiclesByPrice([
     { name: "Executor Star Dreadnought", price: 999 },
     { name: "T-47 Airspeeder", price: 5 },
-    { name: "AT-AT", price: 20 }
-]));
+    { name: "AT-AT", price: 20 },
+  ]),
+);

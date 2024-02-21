@@ -13,7 +13,7 @@ for (let i = 0; i < length; i = i + 1) {
 }
 
 function printFunctionName(name) {
-    console.log(`\n:${name}`);
+  console.log(`\n:${name}`);
 }
 
 // a) Function which will print to console a whole array

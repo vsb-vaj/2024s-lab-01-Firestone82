@@ -6,12 +6,12 @@
 // arrayOfMultiples(17, 6) ➞ [17, 34, 51, 68, 85, 102]
 
 function printFunctionName(name) {
-    console.log(`\n:${name}`);
+  console.log(`\n:${name}`);
 }
 
 // Your code:
 export const arrayOfMultiples = (num, length) => {
-    return Array.from({ length }, (_, i) => num * (i + 1));
+  return Array.from({ length }, (_, i) => num * (i + 1));
 };
 printFunctionName("arrayOfMultiples");
 console.log(arrayOfMultiples(7, 5));
@@ -28,13 +28,12 @@ console.log(arrayOfMultiples(17, 6));
 
 // Your code:
 export const changeDirection = (array) => {
-    return array.reverse();
+  return array.reverse();
 };
 printFunctionName("changeDirection");
 console.log(changeDirection([0, 1, 2, 3]));
 console.log(changeDirection([]));
 console.log(changeDirection([1, 2]));
-
 
 // 3 =================================
 // Create function that takes two arrays and return object with two keys - bigger array, sum all numbers
@@ -44,14 +43,14 @@ console.log(changeDirection([1, 2]));
 
 // Your code:
 export const biggerArray = (array1, array2) => {
-    const sum1 = array1.reduce((a, b) => a + b, 0);
-    const sum2 = array2.reduce((a, b) => a + b, 0);
+  const sum1 = array1.reduce((a, b) => a + b, 0);
+  const sum2 = array2.reduce((a, b) => a + b, 0);
 
-    if (sum1 > sum2) {
-        return { array: array1, sum: sum1 };
-    } else {
-        return { array: array2, sum: sum2 };
-    }
+  if (sum1 > sum2) {
+    return { array: array1, sum: sum1 };
+  } else {
+    return { array: array2, sum: sum2 };
+  }
 };
 printFunctionName("biggerArray");
 console.log(biggerArray([1, 2, 3, 4, 5], [50, 50]));
