@@ -12,80 +12,98 @@ for (let i = 0; i < length; i = i + 1) {
   numbers.push(Math.ceil(Math.random() * 100));
 }
 
+function printFunctionName(name) {
+    console.log(`\n:${name}`);
+}
+
 // a) Function which will print to console a whole array
 export const printArray = (numbers) => {
-  // Your code:
- 
+  numbers.forEach((number) => {
+    console.log(number);
+  });
 };
+printFunctionName("printArray");
+printArray(numbers);
 
 // b) Function which will print to console the length of array
 export const printLength = (numbers) => {
-  // Your code:
- 
+  console.log(numbers.length);
 };
+printFunctionName("printLength");
+printLength(numbers);
 
 // c) Function which will print to console the first element of array
 export const printFirstItem = (numbers) => {
-  // Your code:
-
+  console.log(numbers[0]);
 };
+printFunctionName("printFirstItem");
+printFirstItem(numbers);
 
 // d) Function which will print to console the last element
 export const printLastItem = (numbers) => {
-  // Your code:
-
+  console.log(numbers[numbers.length - 1]);
 };
+printFunctionName("printLastItem");
+printLastItem(numbers);
 
 // e) Function which will print to console the largest number (You can check Math functions)
 export const printLargestItem = (numbers) => {
-  // Your code:
-
+  console.log(Math.max(...numbers));
 };
+printFunctionName("printLargestItem");
+printLargestItem(numbers);
 
 // f) Function which will print to console the smallest number (You can check Math functions)
 export const printSmallestItem = (numbers) => {
-  // Your code:
-
+  console.log(Math.min(...numbers));
 };
+printFunctionName("printSmallestItem");
+printSmallestItem(numbers);
 
 // g) Function which will print to console the sum of all numbers in array (You can check reduce function)
 export const printSum = (numbers) => {
-  // Your code:
-
+  console.log(numbers.reduce((a, b) => a + b, 0));
 };
+printFunctionName("printSum");
+printSum(numbers);
 
 // h) Function which will print to console the difference between the largest and the smallest number (You can check Math functions)
 export const printSALDifference = (numbers) => {
-  // Your code:
-
+  console.log(Math.max(...numbers) - Math.min(...numbers));
 };
+printFunctionName("printSALDifference");
+printSALDifference(numbers);
 
 // i) Function which will print to console the average of all numbers (You can check reduce function)
 export const printAverage = (numbers) => {
-  // Your code:
-
-
+  console.log(numbers.reduce((a, b) => a + b, 0) / numbers.length);
 };
+printFunctionName("printAverage");
+printAverage(numbers);
 
 // j) Function which will print to console the index of largest number (You can check Math functions)
 export const printLargestsIndex = (numbers) => {
-  // Your code:
-
-
+  console.log(numbers.indexOf(Math.max(...numbers)));
 };
+printFunctionName("printLargestsIndex");
+printLargestsIndex(numbers);
 
 // k) Function which will print to console the even numbers (not the array of even numbers),
 // if array doesn't contain any even number, show text "Even number isn't in array"
 export const printEvenNums = (numbers) => {
-  // Your code:
+  const evenNumbers = numbers.filter((number) => number % 2 === 0);
 
-
+  if (evenNumbers.length > 0) {
+    console.log(evenNumbers);
+  }
 };
+printFunctionName("printEvenNums");
+printEvenNums(numbers);
 
-// l) Function which will multiple by 2 every number in array and print the array to console
+// l) Function which will multiply by 2 every number in array and print the array to console
 // Example: printNumsMultipliedBy2([1,2,3]) -> [2,4,6]
 export const printNumsMultipliedBy2 = (numbers) => {
-  // Your code:
-
-
+  console.log(numbers.map((number) => number * 2));
 };
+printFunctionName("printNumsMultipliedBy2");
+printNumsMultipliedBy2(numbers);
