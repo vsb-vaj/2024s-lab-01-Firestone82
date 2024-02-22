@@ -95,6 +95,8 @@ export const printEvenNums = (numbers) => {
 
   if (evenNumbers.length > 0) {
     console.log(evenNumbers);
+  } else {
+    console.log("Even number isn't in array");
   }
 };
 printFunctionName("printEvenNums");
